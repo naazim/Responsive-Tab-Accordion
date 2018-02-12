@@ -1,5 +1,5 @@
-To run.
-
+##Installation
+```
 yarn install
-
 yarn dev-server
+```
