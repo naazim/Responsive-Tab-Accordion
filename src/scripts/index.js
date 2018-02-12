@@ -8,7 +8,7 @@ import '../styles/styles.scss';
 
         let loadAccordionTabs,
             tabConfig,
-            createInput,
+            createRadioInput,
             createLabel,
             createContent,
             loadContentData,
