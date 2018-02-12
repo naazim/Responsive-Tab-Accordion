@@ -1,0 +1,81 @@
+// Settings
+$mercury: #e2e2e2;
+$white: #fff;
+$dove-gray: #666;
+$alto: #d3d3d3;
+$dusty-gray: #999;
+
+$desktop-breakpoint: 768px;
+
+// Styles
+body  {
+  font-family: sans-serif; 
+}
+
+p {
+  color: $dusty-gray;
+  line-height: 1.45;
+}
+
+.tab {
+  &__label {
+    background-color: $mercury;
+    border-bottom: 1px solid $white;
+    color: $dove-gray;
+    cursor: pointer;
+    display: block;
+    font-size: 1.1rem;
+    padding: 1rem 1.5rem;
+    transition: color 0.5s ease, background-color 0.5s ease;
+    user-select: none;
+  }
+
+  &__input {
+    display: none;
+    &:checked {
+      + .tab__label {
+        background-color: $white;
+        color: $alto;
+      }
+
+      + .tab__label + .tab__content {
+        display: block;
+      }
+    }
+  }
+
+  &__title {
+    font-size: 1.3rem;
+    color: $dove-gray;
+  }
+
+  &__content {
+    display: none;
+    line-height: 1;
+    overflow: hidden;
+    padding: 0 1.5rem;
+  }
+}
+
+/*Wide Screens*/
+@media screen and (min-width: $desktop-breakpoint) {
+  .tab {
+    display: flex;
+    flex-wrap: wrap;
+
+    &__label {
+      border-right: 1px solid $white;
+      display: inline-block;
+      order: 1;
+    }
+
+    &__input:checked + .tab__label + .tab__content {
+      display: block;
+    }
+
+    &__content {
+      display: none;
+      order: 100;
+    }
+  }
+}
