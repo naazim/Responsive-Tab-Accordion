@@ -1,9 +1,7 @@
 // Settings
-$mercury: #e2e2e2;
+$primay-color: #666;
+$secondary-color: #d3d3d3;
 $white: #fff;
-$dove-gray: #666;
-$alto: #d3d3d3;
-$dusty-gray: #999;
 
 $desktop-breakpoint: 768px;
 
@@ -13,15 +11,15 @@ body  {
 }
 
 p {
-  color: $dusty-gray;
+  color: lighten($primay-color, 20%);
   line-height: 1.45;
 }
 
 .tab {
   &__label {
-    background-color: $mercury;
+    background-color: lighten($secondary-color, 6%);
     border-bottom: 1px solid $white;
-    color: $dove-gray;
+    color: $primay-color;
     cursor: pointer;
     display: block;
     font-size: 1.1rem;
@@ -35,7 +33,7 @@ p {
     &:checked {
       + .tab__label {
         background-color: $white;
-        color: $alto;
+        color: $secondary-color;
       }
 
       + .tab__label + .tab__content {
@@ -46,7 +44,7 @@ p {
 
   &__title {
     font-size: 1.3rem;
-    color: $dove-gray;
+    color: $primay-color;
   }
 
   &__content {
